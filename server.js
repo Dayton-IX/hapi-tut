@@ -18,9 +18,9 @@ const init = async () => {
 
     server.route({
         method: 'GET',
-        path: '/users/{user?}',
+        path: '/users',
         handler: (request, h) => {
-            return `<h1>Hello ${(request.query.name)} ${request.query.lastName}!</h1>`;
+            return h.redirect("/");
         }
     })
 
